@@ -1,0 +1,43 @@
+.list-check
+  margin: 0
+  padding: 0
+  list-style: none
+  li
+    position: relative
+    padding-left: 60px
+    margin-bottom: 25px
+    font-size: 21px
+    font-weight: 600
+    color: $dark
+    +r(480)
+      font-size: 16px
+      padding-left: 40px
+    &:last-child
+      margin-bottom: 0
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: -5px
+      width: 29px
+      height: 29px
+      background-color: $accent
+      border-radius: 1px
+      +r(480)
+        width: 23px
+        height: 23px
+        top: -3px
+    &::after
+      content: ''
+      position: absolute
+      left: 15px
+      top: -8px
+      width: 15px
+      height: 27px
+      transform: rotate(45deg)
+      border: 2px solid $dark
+      border-top: 0
+      border-left: 0
+      +r(480)
+        width: 11px
+        height: 21px

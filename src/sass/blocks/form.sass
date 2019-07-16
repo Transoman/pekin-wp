@@ -1,0 +1,121 @@
+.form-group
+  position: relative
+  margin-bottom: 25px
+  &--last
+    margin-top: 20px
+    margin-bottom: 0
+.form-field
+  width: 100%
+  padding: 15px 25px
+  border: 1px solid #C4C4C4
+  border-radius: 50px
+  box-shadow: none
+  appearance: none
+  &:focus
+    outline: none
+    border-color: $accent
+.form-label
+  position: absolute
+  top: -10px
+  left: 35px
+  z-index: 1
+  margin: 0
+  padding: 0 17px 0 15px
+  font-family: $exo2
+  background-color: #fff
+  +r(480)
+    left: 20px
+    padding: 0 10px
+
+textarea.form-field
+  height: 100px
+  border-radius: 25px
+
+input[type="checkbox"]
+  @extend .visually-hidden
+  &:checked + .wpcf7-list-item-label
+    &::after
+      opacity: 1
+  & + .wpcf7-list-item-label
+    position: relative
+    display: block
+    padding-left: 40px
+    font-size: 12px
+    cursor: pointer
+    +r(480)
+      padding-left: 30px
+      br
+        display: none
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 3px
+      width: 17px
+      height: 17px
+      border: 1px solid $bd-color
+      border-radius: 50%
+    &::after
+      content: ''
+      position: absolute
+      top: 8px
+      left: 5px
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      +gd
+      opacity: 0
+      +trans
+    a
+      color: $main-color
+      text-decoration: underline
+      &:hover, &:focus
+        color: $accent
+
+span.wpcf7-not-valid-tip
+  position: absolute
+  bottom: calc(100% + 10px)
+  left: 10px
+  z-index: 1
+  padding: 3px 10px
+  font-size: 12px
+  background-color: tomato
+  color: #fff
+  border-radius: 5px
+  &::before
+    content: ''
+    position: absolute
+    bottom: -5px
+    left: 15px
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 5px 5px 0 5px
+    border-color: tomato transparent transparent transparent
+
+div.wpcf7 .ajax-loader
+  display: none
+
+.btn-loading
+  &::before
+    content: ''
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: 18px
+    height: 18px
+    margin-top: 1px
+    margin-right: 10px
+    bottom: auto
+    left: auto
+    opacity: 1
+    border-radius: 50%
+    border: 3px solid transparent
+    border-top: 3px solid rgba(255, 255, 255, 0.7)
+    border-right: 3px solid rgba(255, 255, 255, 0.7)
+    background: transparent
+    animation: 0.5s rotate cubic-bezier(0.4, 0, 0.2, 1) infinite
+    +r(992)
+      margin-top: 1px
+    +r(576)
+      margin-top: 0

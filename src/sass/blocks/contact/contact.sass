@@ -1,0 +1,51 @@
+.contact
+  padding: 110px 0 70px
+  +r(767)
+    padding: 40px 0
+  .section-title
+    margin-bottom: 30px
+    &::before
+      content: ''
+      top: 50%
+      right: calc(100% + 45px)
+      width: 100px
+      height: 6px
+      margin-top: -3px
+      background: linear-gradient(190deg, #00A2C4, #7DC243 80%, #B3D347)
+      +r(992)
+        display: none
+  &__map
+    height: 440px
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15)
+    border-radius: 2px
+    overflow: hidden
+  &__content
+    padding-top: 30px
+    padding-left: 70px
+    +r(992)
+      padding: 0
+    +r(767)
+      margin-bottom: 30px
+  &__item
+    margin-bottom: 20px
+    font-family: $exo2
+    font-size: 21px
+    font-weight: 600
+    color: $dark
+    +r(576)
+      font-size: 18px
+    &-label
+      margin: 0
+      font-size: 18px
+      font-weight: 400
+      color: $main-color
+      +r(576)
+        font-size: 16px
+  .btn
+    margin-top: 10px
+    width: 100%
+    min-width: auto
+    max-width: 260px
+    +r(767)
+      display: block
+      margin: 10px auto 0

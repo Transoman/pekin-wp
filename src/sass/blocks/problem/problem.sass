@@ -1,0 +1,87 @@
+.problem
+  &__note
+    position: relative
+    margin: 0
+    padding: 20px 0 20px 40px
+    font-family: $exo2
+    font-size: 30px
+    line-height: 1.25
+    color: $dark
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 6px
+      height: 100%
+      background-image: linear-gradient(#00A2C4, #7DC243 100%)
+    +r(1200)
+      font-size: 26px
+    +r(992)
+      margin-bottom: 40px
+    +r(576)
+      font-size: 20px
+      padding: 10px 0 10px 20px
+  &__row
+    display: flex
+    +r(576)
+      display: block
+    & > *:not(:last-child)
+      margin-right: 70px
+      +r(1200)
+        margin-right: 30px
+      +r(576)
+        margin-right: 0
+        margin-bottom: 30px
+    .icon-box
+      flex: 1
+
+.problem-list
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 70px
+  +r(992)
+    margin-bottom: 40px
+  &__item
+    position: relative
+    z-index: 1
+    width: 25%
+    padding: 70px 20px 35px 30px
+    background-color: #fff
+    border: 1px solid $bd-color
+    border-radius: 2px
+    +trans
+    +r(992)
+      width: 50%
+    +r(576)
+      width: 100%
+    &:hover
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1)
+      transform: scale(1.01)
+      z-index: 1
+    p
+      margin: 0
+      font-size: 16px
+      font-weight: 500
+      color: $dark
+  &__title
+    margin-bottom: 10px
+    font-size: 21px
+    font-weight: 600
+    &::before
+      content: ''
+      position: absolute
+      left: 30px
+      top: 45px
+      width: 30px
+      height: 3px
+      +gd
+  &__number
+    position: absolute
+    right: 15px
+    top: 15px
+    z-index: -1
+    font-family: $exo2
+    font-size: 90px
+    color: #EFEFEF
+    line-height: 1

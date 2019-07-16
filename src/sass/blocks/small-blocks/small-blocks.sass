@@ -1,0 +1,12 @@
+@import 'logo'
+@import 'phone'
+@import 'icon-box'
+@import 'list-check'
+@import 'slider'
+
+.text-gradient
+  color: $accent
+  @supports (background-clip: text)
+    background: linear-gradient(to left, $blue, $accent)
+    background-clip: text
+    -webkit-text-fill-color: transparent

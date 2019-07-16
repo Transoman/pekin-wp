@@ -1,0 +1,47 @@
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 10
+  padding: 40px 0
+  +trans
+  +r(767)
+    padding: 10px 0
+  &.fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    padding: 10px 0
+    background: $dark
+    box-shadow: 0 0 10px rgba(#000, 0.1)
+    animation: slideDown 0.5s ease-in-out
+  .container
+    position: relative
+    display: flex
+    align-items: center
+  &__logo
+    margin-right: 50px
+    +r(480)
+      margin-right: 10px
+  &__nav
+    margin-left: auto
+    margin-right: 40px
+    +r(1200)
+      margin: 0
+  &__phone
+    +r(1200)
+      margin-left: auto
+      margin-right: 50px
+    +r(480)
+      margin-right: 40px
+    .phone
+      &__tel
+        +r(767)
+          font-size: 19px
+        +r(480)
+          font-size: 14px
+      &__callback
+        +r(480)
+          display: none

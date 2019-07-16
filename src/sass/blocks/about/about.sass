@@ -1,0 +1,87 @@
+.about
+  padding-top: 150px
+  +r(992)
+    padding-top: 110px
+  +r(767)
+    padding-top: 60px
+  .section-title
+    &::before
+      top: -65px
+      left: 335px
+      white-space: nowrap
+      +r(1440)
+        left: 200px
+      +r(1200)
+        top: -30px
+      +r(992)
+        left: 50%
+        transform: translateX(-50%)
+      +r(767)
+        white-space: normal
+        width: 100%
+  &__wrap
+    display: flex
+    +r(992)
+      display: block
+  &__right
+    flex-grow: 1
+    padding-top: 35px
+  &__note
+    font-family: $exo2
+    font-size: 29px
+    line-height: 1.25
+    color: $dark
+    +r(480)
+      font-size: 21px
+    &::after
+      content: ''
+      display: block
+      width: 160px
+      height: 6px
+      margin: 20px 0 50px
+      background: linear-gradient(190deg, #00A2C4, #7DC243 80%, #B3D347)
+
+.about-number-list
+  width: 50%
+  flex-shrink: 0
+  display: flex
+  flex-wrap: wrap
+  margin-right: 55px
+  +r(992)
+    width: 100%
+  &__item
+    width: 50%
+    min-height: 260px
+    padding: 30px
+    background-color: #fff
+    border: 1px solid $bd-color
+    +trans
+    +r(1200)
+      padding: 20px
+      min-height: 210px
+    +r(480)
+      width: 100%
+      min-height: auto
+      text-align: center
+    &:hover
+      +rmin(768)
+        transform: scale(1.03)
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1)
+        border-color: transparent
+    p
+      margin: 0
+      font-size: 21px
+      font-weight: 500
+      color: $dark
+      +r(1200)
+        font-size: 18px
+  &__number
+    font-size: 60px
+    font-weight: 700
+    color: $accent
+    +r(1200)
+      font-size: 50px
+    @supports (background-clip: text)
+      background: linear-gradient(143deg, $blue, $accent)
+      background-clip: text
+      -webkit-text-fill-color: transparent
