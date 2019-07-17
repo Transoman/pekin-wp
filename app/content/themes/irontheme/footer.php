@@ -19,6 +19,9 @@
           <p class="copy">Copyright &copy; 2011 - <?php echo date('Y'); ?> ООО Пекин</p>
         </div>
       </div>
+
+      <p class="dev">Сделано в <a href="https://bestslide.pro" target="_blank">bestslide.pro</a></p>
+
     </div>
   </footer><!-- #colophon -->
 
