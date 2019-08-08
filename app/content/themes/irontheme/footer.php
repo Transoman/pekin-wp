@@ -9,6 +9,9 @@
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
+          <p class="policy">
+            <a href="#" class="text-gradient docs_open">Скачать наши документы</a>
+          </p>
           <?php if (get_field('policy', 'option')): ?>
             <p class="policy">
               <a href="<?php echo esc_url(get_field('policy', 'option')); ?>" target="_blank">Политика конфиденциальности</a>
@@ -57,6 +60,20 @@
     <h3 class="modal__title">Оставте свой отзыв</h3>
 
     <?php echo do_shortcode('[contact-form-7 id="52" title="Отзыв"]'); ?>
+  </div>
+
+  <div id="docs" class="modal">
+    <button type="button" class="modal__close docs_close"></button>
+
+    <h3 class="modal__title">Наши документы</h3>
+
+    <ul>
+      <li><a href="<?php echo THEME_URL; ?>/docs/dogovor-zajavka-obrazec.doc" target="_blank">Договор-Заявка на предоставление транспортного средства</a></li>
+      <li><a href="<?php echo THEME_URL; ?>/docs/dogovor-obrazec.rtf" target="_blank">Договор перевозки грузов автомобильным транспортом</a></li>
+      <li><a href="<?php echo THEME_URL; ?>/docs/dogovor-obrazec.doc" target="_blank">Карта партнера ООО «ПЕКИН»</a></li>
+      <li><a href="<?php echo THEME_URL; ?>/docs/svidetelstvo-OOO-PEKIN.jpg" target="_blank">Свидетельство ООО «ПЕКИН»</a></li>
+    </ul>
+
   </div>
 
 <?php wp_footer(); ?>
